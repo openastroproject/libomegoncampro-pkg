@@ -1,0 +1,13 @@
+Create pkg-config file
+--- libomegonprocam.pc.in	1970-01-01 01:00:00.000000000 +0100
++++ libomegonprocam.pc.in	2016-11-05 23:11:43.247858211 +0000
+@@ -0,0 +1,9 @@
++libdir=@LIBDIR@
++includedir=/usr/include
++
++Name: libomegonprocam
++Description: Omegon camera interface library
++URL: http://www.omegon.eu/
++Version: @VERSION@
++Libs: -L${libdir} -lomegonprocam
++Cflags: -I${includedir}

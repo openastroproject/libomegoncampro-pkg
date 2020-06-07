@@ -1,0 +1,10 @@
+Document: libomegonprocam
+Title: libomegonprocam SDK Manual
+Author: Omegon
+Abstract: How to use the libomegonprocam SDK
+Section: Science/Astronomy
+
+Format: HTML
+Index: /usr/share/doc/libomegonprocam/en.html
+Files: /usr/share/doc/libomegonprocam/*.html
+

@@ -1,0 +1,20 @@
+VERSION=1.39.15325
+
+override_dh_auto_build:
+	dh_auto_build -- LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH) VERSION=DEBVERSION
+
+override_dh_auto_install:
+	case $(DEB_BUILD_ARCH) in \
+		amd64) \
+			ln linux/x64/libomegonprocam.so linux/x64/libomegonprocam.so.$(VERSION);; \
+		aarch64|arm64) \
+			ln linux/arm64/libomegonprocam.so linux/arm64/libomegonprocam.so.$(VERSION);; \
+		armhf) \
+			ln linux/armhf/libomegonprocam.so linux/armhf/libomegonprocam.so.$(VERSION);; \
+	esac
+	dh_auto_install -- SRCDIR=$(CURDIR) ARCH=$(DEB_TARGET_ARCH) \
+		INCDIR=$(CURDIR)/debian/tmp/usr/include \
+		LIBDIR=$(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH) \
+		PKGCONFDIR=$(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig \
+		UDEVDIR=$(CURDIR)/debian/tmp/lib/udev/rules.d \
+		VERSION=DEBVERSION MAJOR_REV=1
