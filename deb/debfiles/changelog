@@ -1,5 +1,5 @@
-libomegonprocam (1.39.15325-1) xenial; urgency=medium
+libomegonprocam (1.55.24239-1) jammy; urgency=medium
 
   * Initial release
 
- -- James Fidell <james@openastroproject.org>  Sun, 7 Jun 2020 23:05:55 +0100
+ -- James Fidell <james@openastroproject.org>  Fri, 5 Jan 2024 23:56:55 +0000

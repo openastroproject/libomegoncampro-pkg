@@ -1,14 +1,14 @@
 %define debug_package %{nil}
 
 Name:           libomegonprocam
-Version:        1.39.15325
+Version:        1.55.24239
 Release:        1
 Summary:        Omegon camera support libraries
 License:	GPLv2+
 URL:            http://www.omegon.eu/
 Prefix:         %{_prefix}
 Provides:       libomegonprocam = %{version}-%{release}
-Obsoletes:      libomegonprocam < 1.39.15325
+Obsoletes:      libomegonprocam < 1.55.24239
 Source:         libomegonprocam-%{version}.tar.gz
 Patch0:         pkg-config.patch
 Patch1:         udev-rules.patch
@@ -21,7 +21,7 @@ Summary:        Development files for %{name}
 Group:          Development/Libraries
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Provides:       libomegonprocam-devel = %{version}-%{release}
-Obsoletes:      libomegonprocam-devel < 1.39.15325
+Obsoletes:      libomegonprocam-devel < 1.55.24239
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -77,6 +77,6 @@ cp 70-omegonpro-cameras.rules %{buildroot}%{_udevrulesdir}
 %{_docdir}/%{name}-%{version}/*.html
 
 %changelog
-* Sun Jun 7 2020 James Fidell <james@openastroproject.org> - 1.39.15325-1
+* Fri Jan 5 2024 James Fidell <james@openastroproject.org> - 1.55.24239-1
 - Initial RPM release
 
