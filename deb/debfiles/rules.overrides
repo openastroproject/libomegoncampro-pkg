@@ -1,4 +1,4 @@
-VERSION=1.55.24239
+VERSION=1.55.24621
 
 override_dh_auto_build:
 	dh_auto_build -- LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH) VERSION=DEBVERSION
